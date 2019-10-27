@@ -9,4 +9,5 @@
 
 ## Available Scripts
 
-- [Generate Thumbs](#generate-thumbs)
+- [Generate Thumbs](accounts/generate-thumbs/README.md)
+- [Remove Thumbs](accounts/remove-thumbs/README.md)

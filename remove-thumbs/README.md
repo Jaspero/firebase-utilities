@@ -1,7 +1,8 @@
-# Generate Thumbs
+# Remove Thumbs
 
-Creates a thumb version of each image in a storage bucket
-
+Remove thumbs for each image in the storage bucket.
+Any files with `generated: 'true'` in metadata are considered thumbs
+ 
 ## Environment Variables
 
 |Name|Required|Description|

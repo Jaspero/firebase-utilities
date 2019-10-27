@@ -4,8 +4,8 @@ const {dirname} = require('path');
 const sharp = require('sharp');
 
 const PROJECT_ID = process.env.PI;
-const SERVICE_ACCOUNT = join('../', process.env.SV);
-const BUCKET_NAME = process.env.BN + '.appspot.com';
+const SERVICE_ACCOUNT = join('../accounts', (process.env.SV || process.env.PI) + '.account.json');
+const BUCKET_NAME = (process.env.BN || process.env.PI) + '.appspot.com';
 const THUMB_MEDIUM = {width: 600, height: 600};
 
 const lookUps = [

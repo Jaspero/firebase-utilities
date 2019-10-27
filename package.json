@@ -1,0 +1,22 @@
+{
+  "name": "firebase-utilities",
+  "version": "1.0.0",
+  "description": "A set of utility scripts for firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaspero/firebase-utilities.git"
+  },
+  "author": "Jaspero Ltd.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jaspero/firebase-utilities/issues"
+  },
+  "homepage": "https://github.com/Jaspero/firebase-utilities#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^4.0.0"
+  }
+}

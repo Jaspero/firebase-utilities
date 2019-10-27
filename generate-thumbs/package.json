@@ -1,0 +1,15 @@
+{
+  "name": "@jaspero/generate-thumbs",
+  "version": "1.0.0",
+  "description": "Generate thumb images for all images",
+  "main": "index.js",
+  "dependencies": {
+    "sharp": "^0.23.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

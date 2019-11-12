@@ -9,6 +9,6 @@
 
 ## Available Scripts
 
-- [Generate Thumbs](generate-thumbs/README.md)
-- [Remove Thumbs](remove-thumbs/README.md)
-- [Build Indexes](build-indexes/README.md)
+- [Generate Thumbs](scripts/generate-thumbs)
+- [Remove Thumbs](scripts/remove-thumbs)
+- [Build Indexes](scripts/build-indexes)

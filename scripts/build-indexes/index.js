@@ -7,14 +7,24 @@ const collections = [
         collection: 'example',
 
         /**
-         * Any fields this collection can be filtered by using the '==', '>', '<', '>=' or '<=' operators
+         * Any fields this collection can be filtered.
+         * Add the array property if it should be filtered
+         * by the 'array-contains' or 'array-contains-any'
+         * operators
          */
-        queries: ['search', 'category', 'active'],
-
-        /**
-         * Any fields this collection can be filtered by using the 'array-contains' and 'array-contains-any' operators
-         */
-        array: ['search', 'category'],
+        queries: [
+            {
+                fieldPath: 'title'
+            },
+            {
+                fieldPath: 'search',
+                array: true
+            },
+            {
+                fieldPath: 'tags',
+                array: true
+            }
+        ],
 
         /**
          * Any fields this collection can be ordered by
@@ -38,14 +48,14 @@ writeFileSync(
                 acc.indexes.push(
                     ...cur.order.reduce((indexes, fieldPath) => {
 
-                        if (fieldPath !== query) {
+                        if (fieldPath !== query.fieldPath) {
                             indexes.push(
                                 {
                                     ...base,
                                     fields: [
                                         {
-                                            fieldPath: query,
-                                            ...cur.array && cur.array.includes(query) ? {arrayConfig: 'CONTAINS'} : {order: 'ASCENDING'}
+                                            fieldPath: query.fieldPath,
+                                            ...query.array ? {arrayConfig: 'CONTAINS'} : {order: 'ASCENDING'}
                                         },
                                         {
                                             fieldPath,
@@ -58,7 +68,7 @@ writeFileSync(
                                     fields: [
                                         {
                                             fieldPath: query,
-                                            ...cur.array && cur.array.includes(query) ? {arrayConfig: 'CONTAINS'} : {order: 'DESCENDING'}
+                                            ...query.array ? {arrayConfig: 'CONTAINS'} : {order: 'DESCENDING'}
                                         },
                                         {
                                             fieldPath,

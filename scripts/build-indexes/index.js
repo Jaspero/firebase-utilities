@@ -67,7 +67,7 @@ writeFileSync(
                                     ...base,
                                     fields: [
                                         {
-                                            fieldPath: query,
+                                            fieldPath: query.fieldPath,
                                             ...query.array ? {arrayConfig: 'CONTAINS'} : {order: 'DESCENDING'}
                                         },
                                         {

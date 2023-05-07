@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Jaspero/firebase-utilities#readme",
   "dependencies": {
-    "@google-cloud/storage": "^4.0.0"
+    "@google-cloud/storage": "^4.7.2"
   }
 }
